@@ -6,8 +6,10 @@ public class Application {
 		LinkedList<Integer> list = new LinkedList<>();
 			for(int i = 0; i < 100; i++) {
 				list.add(i);
-			}
-		System.out.println(list);
+		}
+		assert list.contain(99);
+		assert list.delete(5);
+		assert !list.contain(5);
 	}
 	
 }

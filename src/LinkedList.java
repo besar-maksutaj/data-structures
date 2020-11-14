@@ -16,6 +16,33 @@ public class LinkedList<T> {
 		 predecessor.setNext(newNode);
 	 }
 	
+	 public boolean contain(T element) {
+		 Node<T> current = head;
+		 while(current.getNext() != null) {
+			 current = current.getNext();
+			 if(current.getValue().equals(element)) {
+				 return true;
+			 }
+		 }
+		 return false;
+	 }
+	 
+	 public boolean delete(T element) {
+		 Node<T> pred = head;
+		 Node<T> current = pred.getNext();
+		 while(current != null) {
+			 if(current.getValue().equals(element)) {
+				 pred.setNext(current.getNext());
+				 return true;
+			 }
+			 pred = current;
+			 current = current.getNext();
+		 }
+		 return false;
+	 }
+	 
+	 
+	 
 	 public String toString() {
 		 String value = "";
 		 Node<T> successor = head;
