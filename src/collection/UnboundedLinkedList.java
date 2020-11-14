@@ -1,9 +1,10 @@
+package collection;
 
-public class LinkedList<T> {
+public class UnboundedLinkedList<T> {
 
 	private Node<T> head;
 	
-	public LinkedList() {
+	public UnboundedLinkedList() {
 		head = new Node<>(null);
 	}
 	
